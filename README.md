@@ -1,5 +1,6 @@
-# NEMO_MLE
-Repo for online implementation of Bodner (2024, in prep) in NEMO. 
-Contains 
-* scripts (function of vertical fluxes)
-* submeso_ml (libraries)
+# submeso_ML
+Repo for data-driven submesoscale parameterization contains:
+* scripts
+* submeso_ml libraries
+
+run pip install -e .
