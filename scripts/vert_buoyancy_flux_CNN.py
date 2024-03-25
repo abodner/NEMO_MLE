@@ -4,7 +4,6 @@ import torch
 import torch.utils.data as Data
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import SubsetRandomSampler
-from pytorch_lightning.callbacks import LearningRateMonitor
 import torch.nn as nn
 import glob
 import xarray as xr
@@ -46,7 +45,7 @@ def vert_buoyancy_flux_CNN(input_string=input_string, res_string=res_string):
         
         
         # load pre-trained model without HBL  ******* CHANGE PATH *******
-        model = torch.load('/scratch/ab10313/pleiades/trained_models/fcnn_k5_l7_m_HBL_res_'+res_strg[i_res]+'.pt')
+        model = torch.load('NEMO_MLE/trained_models/fcnn_k5_l7_m_HBL_res_'+res_strg[i_res]+'.pt')
         
         # passing the entire batch in test_loader into the CNN to get prediction of w'b'                
         for x_data in test_loader:
